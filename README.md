@@ -12,5 +12,4 @@ Learning DSA in C
   - combines dereference operator (*) and member access operator (.) for referencing pointers towards structs - use when assigning variables to members of a struct with a pointer
   - ex. see c_basics/pointers/pointer_playground.c w/ malloc example
 - buffer overflow: when you write beyond the bounds of an array, undefined behavior occurs - in my case, it was with a char
-  - since chars are essentially arrays in C that are null-terminated, writing in a char that is exactly the size of the memory of the char that has been allocated will cause buffer overflow - see
-  - c_basics/pointers/pointer_playground.c w/ pointer example in the stack
+  - since chars are essentially arrays in C that are null-terminated, writing in a char that is exactly the size of the memory of the char that has been allocated will cause buffer overflow - see c_basics/pointers/pointer_playground.c w/ pointer example in the stack
