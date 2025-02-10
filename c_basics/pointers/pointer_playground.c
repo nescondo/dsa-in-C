@@ -42,7 +42,7 @@ int main() {
 	// instantiating a Student struct to fill that memory address created by the p2 pointer
 	// the -> operator combines the dereference operator (*) and member access operator of a struct (.); use this
 	// when trying to assign variables of a struct into an already allocated piece of memory in the heap
-	p2->name, sizeof(p2->name), "Estefany Flores"; p2->gnum, sizeof(p2->gnum), "G7129323"; p2->gpa=4.0; p2->year=4;
+	p2->name, "Estefany Flores"; p2->gnum, "G7129323"; p2->gpa=4.0; p2->year=4;
 	
 	printf("student2 name: %s\n", (*p2).name);
 	printf("student2 gnum: %s\n", (*p2).gnum);
