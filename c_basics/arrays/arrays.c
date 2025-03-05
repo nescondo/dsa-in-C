@@ -29,7 +29,7 @@ int main() {
 	int n;
 	printf("Enter size of array:\n");
 	scanf("%d", &n);
-	int C[n]; // DO NOT try to initialize the array here - it will not work as intended
+	int C[n]; // DO NOT try to initialize the array here - it will not work as intended; variable sized arrays cannot be initialized
 	C[0]=27;
 	
 	printf("Size of C: %ld\n", sizeof(C));
@@ -40,7 +40,7 @@ int main() {
 	}
 	
 	// printing array output - taking an element: int x and assigning that with a value from A (taking an element X from A)
-	//printf("Printing array A:\n");
+	//printf("Printing array A:\n"); - for C++ only
 	//for (int x:A)
 	//}
 	//	printf("%d\n", A[i]);

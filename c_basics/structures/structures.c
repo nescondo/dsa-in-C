@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 // what is a structure? how i think of it: essentially an object (or data structure) that only defines
-// the properties of the object - not its' functions/methods (functionality)
+// the properties of the object - not its' functions/methods (functionality) - only in C (C++ can define functions in structs; the
+// difference between objects and structs in C++ are the default access specifiers - where structs are automatically public
+// and objects are automatically private)
 
 // defining structures
 struct Rectangle {
@@ -25,13 +27,15 @@ int main() {
 	struct Rectangle r; // now occupying memory
 	
 	// declaration + initialization of struct
-	struct Rectangle r2={10,5};
+	struct Rectangle r2={10,5, 'C'}; // remember, chars are single quoted while strings are double quoted
 	
 	// accessing members for modification of information of a struct: dot operators
 	r2.length=15;
 	r2.width=10;
+	r2.x='C';
 	
 	printf("Area of rectangle is %d\n", r2.length * r2.width);
+	printf("Char of rectangle is %c\n", r2.x);
 	
 	// declaring many structures at once
 	struct Rectangle aWholeLotofRectangles[50]; //aWholeLotofRectangles represents an array of 50 rectangles

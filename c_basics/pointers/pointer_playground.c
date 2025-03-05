@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 struct Student {
 	// char name[15]; 15 bits/4 bytes (round up) - caused buffer overflow - my reasoning was because C always has null termination
@@ -7,7 +8,7 @@ struct Student {
 	// if the space in memory just so happens to have a section filled next to it, it will overflow to the succeeding section
 	// of memory. so I think it will be better to have a bigger buffer to your strings/arrays to prevent this
 	
-	char name[30]; // 30 bits/8 bytes (round up)
+	char name[50]; // 30 bits/8 bytes (round up)
 	char gnum[15]; // 15 bits/4 bytes (round up)
 	float gpa; // 4 bytes
 	int year; // 4 bytes
@@ -42,7 +43,7 @@ int main() {
 	// instantiating a Student struct to fill that memory address created by the p2 pointer
 	// the -> operator combines the dereference operator (*) and member access operator of a struct (.); use this
 	// when trying to assign variables of a struct into an already allocated piece of memory in the heap
-	p2->name, "Estefany Flores"; p2->gnum, "G7129323"; p2->gpa=4.0; p2->year=4;
+	strcpy(p2->name, "Estefany Flores"); strcpy(p2->gnum, "G7129323"); p2->gpa=4.0; p2->year=4;
 	
 	printf("student2 name: %s\n", (*p2).name);
 	printf("student2 gnum: %s\n", (*p2).gnum);

@@ -8,7 +8,7 @@
 // one reason is that the heap is inaccessible to a program (it is outside of the jurisdiction of the program)
 // think about how the relationship between an external hard drive and your laptop works - you can't directly access data in the
 // hard drive without having a route to that memory; which is created once you connect it to your laptop (essentially, the route is your
-// pointer to that data)
+// pointer to that data) - a lot of explanation, but to keep it short, to access heap memory, outside resources, and parameter passing
 
 // what are the three portions of memory?
 // heap, stack, code section
